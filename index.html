@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Plan</title>
+    <style>
+        h1{
+            text-align: center;
+            margin-bottom: 50px;
+            text-decoration: underline;
+        }
+        #weekdays, #plan{
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+        #weekdays div, #plan div{
+            border: 2px Solid black;
+            padding: 50px 0;
+            text-align: center;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #plan div{
+            text-align: left;
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mission 2023</h1>
+    <div id="container">
+        <div id="weekdays">
+            <div class="0">Sunday</div>
+            <div class="1">Monday</div>
+            <div class="2">Tuesday</div>
+            <div class="3">Wednesday</div>
+            <div class="4">Thursday</div>
+            <div class="5">Friday</div>
+            <div class="6">Saturday</div>
+        </div>
+        <div id="plan">
+            <div class="0">
+                <ul>
+                    <li>Development</li>
+                    <li>DSA</li>
+                </ul>
+            </div>
+            <div class="1">
+                <ul>
+                    <li>Development</li>
+                    <li>DSA</li>
+                </ul>
+            </div>
+            <div class="2">
+                <ul>
+                    <li>ML</li>
+                </ul>
+            </div>
+            <div class="3">
+                <ul>
+                    <li>ML</li>
+                </ul>
+            </div>
+            <div class="4">
+                <ul>
+                    <li>ML</li>
+                </ul>
+            </div>
+            <div class="5">
+                <ul>
+                    <li>DSA</li>
+                </ul>
+            </div>
+            <div class="6">
+                <ul>
+                    <li>DSA</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        const date = new Date();
+        var ele = document.getElementsByClassName(date.getDay().toString());
+        for(var i=0; i<Object.keys(ele).length; i++){
+            ele[i].style.backgroundColor = "#25b03f";
+        }
+    </script>
+</body>
+</html>
